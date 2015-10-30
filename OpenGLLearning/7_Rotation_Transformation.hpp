@@ -1,5 +1,5 @@
-#ifndef _4_SHADERS_HPP_INCLUDED
-#define _4_SHADERS_HPP_INCLUDED
+#ifndef _7_ROTATION_TRANSFORMATION_HPP_INCLUDED
+#define _7_ROTATION_TRANSFORMATION_HPP_INCLUDED
 
 #include <iostream>
 #include <GL/glew.h>
@@ -7,9 +7,9 @@
 #include <glm/glm.hpp>
 #include "helpers.hpp"
 
-namespace _4_Shader {
+namespace _7_Rotation_Transformation {
 
-    const char *title = "Shader";
+    const char *title = "Rotation Transformation";
 
     const char *vertexShaderSource = R"VS(
 
@@ -17,8 +17,10 @@ namespace _4_Shader {
 
 layout (location = 0) in vec3 Position;
 
+uniform mat4 World;
+
 void main() {
-    gl_Position = vec4(0.5 * Position.x, 0.5 * Position.y, Position.z, 1.0);
+    gl_Position = World * vec4(Position, 1.0);
 }
 
 )VS";
@@ -82,6 +84,8 @@ void main() {
         }
         glValidateProgram(program);
         glUseProgram(program);
+        auto worldLocation = glGetUniformLocation(program, "World");
+        GLfloat scale = 0.0f;
         using namespace glm;
         fvec3 vertices[3] = {
             {-1.0f, -1.0f, 0.0f},
@@ -97,6 +101,14 @@ void main() {
             glEnableVertexAttribArray(0);
             glBindBuffer(GL_ARRAY_BUFFER, vbo);
             glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
+            scale += 0.001f;
+            mat4 world = {
+                cosf(scale), -sinf(scale), 0.0f, 0.0f,
+                sinf(scale), cosf(scale), 0.0f, 0.0f,
+                0.0f, 0.0f, 1.0f, 0.0f,
+                0.0f, 0.0f, 0.0f, 1.0f
+            };
+            glUniformMatrix4fv(worldLocation, 1, GL_TRUE, &world[0][0]);
             glDrawArrays(GL_TRIANGLES, 0, 3);
             glDisableVertexAttribArray(0);
             glfwSwapBuffers(window);
