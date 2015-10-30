@@ -47,5 +47,8 @@
     <ClInclude Include="7_Rotation_Transformation.hpp">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="8_Scaling_Transformation.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
