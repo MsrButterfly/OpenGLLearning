@@ -40,7 +40,7 @@ namespace _2_Hello_dot_ {
         }
         glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
         using namespace glm;
-        fvec3 vertex(0.0f, 0.0f, 0.0f);
+        vec3 vertex(0.0f, 0.0f, 0.0f);
         GLuint vbo = 0;
         glGenBuffers(1, &vbo);
         glBindBuffer(GL_ARRAY_BUFFER, vbo);

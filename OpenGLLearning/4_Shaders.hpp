@@ -83,7 +83,7 @@ void main() {
         glValidateProgram(program);
         glUseProgram(program);
         using namespace glm;
-        fvec3 vertices[3] = {
+        vec3 vertices[3] = {
             {-1.0f, -1.0f, 0.0f},
             {1.0f, -1.0f, 0.0f},
             {0.0f, 1.0f, 0.0f}
@@ -91,7 +91,7 @@ void main() {
         GLuint vbo = 0;
         glGenBuffers(1, &vbo);
         glBindBuffer(GL_ARRAY_BUFFER, vbo);
-        glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), &vertices, GL_STATIC_DRAW);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
         while (!glfwWindowShouldClose(window)) {
             glClear(GL_COLOR_BUFFER_BIT);
             glEnableVertexAttribArray(0);
