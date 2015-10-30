@@ -11,6 +11,7 @@
 #include "6_Translation_Transformation.hpp"
 #include "7_Rotation_Transformation.hpp"
 #include "8_Scaling_Transformation.hpp"
+#include "9_Interpolation.hpp"
 
 int main(int argc, const char *argv[]) {
     using namespace std;
@@ -23,7 +24,8 @@ int main(int argc, const char *argv[]) {
         OPT(_5_Uniform_Variables),
         OPT(_6_Translation_Transformation),
         OPT(_7_Rotation_Transformation),
-        OPT(_8_Scaling_Transformation)
+        OPT(_8_Scaling_Transformation),
+        OPT(_9_Interpolation)
     };
 #undef OPT
     cout << "==> Select an option: " << endl;

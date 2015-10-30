@@ -161,6 +161,7 @@
     <ClInclude Include="6_Translation_Transformation.hpp" />
     <ClInclude Include="7_Rotation_Transformation.hpp" />
     <ClInclude Include="8_Scaling_Transformation.hpp" />
+    <ClInclude Include="9_Interpolation.hpp" />
     <ClInclude Include="helpers.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

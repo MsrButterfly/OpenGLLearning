@@ -50,5 +50,8 @@
     <ClInclude Include="8_Scaling_Transformation.hpp">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="9_Interpolation.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
