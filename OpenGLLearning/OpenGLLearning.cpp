@@ -12,6 +12,7 @@
 #include "7_Rotation_Transformation.hpp"
 #include "8_Scaling_Transformation.hpp"
 #include "9_Interpolation.hpp"
+#include "10_Indexed_Draws.hpp"
 
 int main(int argc, const char *argv[]) {
     using namespace std;
@@ -25,15 +26,16 @@ int main(int argc, const char *argv[]) {
         OPT(_6_Translation_Transformation),
         OPT(_7_Rotation_Transformation),
         OPT(_8_Scaling_Transformation),
-        OPT(_9_Interpolation)
+        OPT(_9_Interpolation),
+        OPT(_10_Indexed_Draws)
     };
 #undef OPT
-    cout << "==> Select an option: " << endl;
     for (size_t i = 0; i < options.size(); ++i) {
         cout << i + 1 << ". " << options[i].first << endl;
     }
     size_t n;
     int exitStatus;
+    cout << endl << "Select a test case: ";
     if (cin >> n && n > 0 && n <= options.size()) {
         cout << endl;
         exitStatus = options[n - 1].second(argc, argv);

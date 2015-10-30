@@ -153,6 +153,7 @@
     <ClCompile Include="OpenGLLearning.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="10_Indexed_Draws.hpp" />
     <ClInclude Include="1_Open_a_window.hpp" />
     <ClInclude Include="2_Hello_dot_.hpp" />
     <ClInclude Include="3_First_Triangle.hpp" />

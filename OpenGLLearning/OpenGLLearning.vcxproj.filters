@@ -53,5 +53,8 @@
     <ClInclude Include="9_Interpolation.hpp">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="10_Indexed_Draws.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
