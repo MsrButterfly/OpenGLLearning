@@ -158,6 +158,7 @@
     <ClInclude Include="3_First_Triangle.hpp" />
     <ClInclude Include="4_Shaders.hpp" />
     <ClInclude Include="5_Uniform_Variables.hpp" />
+    <ClInclude Include="6_Translation_Transformation.hpp" />
     <ClInclude Include="helpers.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

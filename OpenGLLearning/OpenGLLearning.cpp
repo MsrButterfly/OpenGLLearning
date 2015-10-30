@@ -8,6 +8,7 @@
 #include "3_First_Triangle.hpp"
 #include "4_Shaders.hpp"
 #include "5_Uniform_Variables.hpp"
+#include "6_Translation_Transformation.hpp"
 
 int main(int argc, const char *argv[]) {
     using namespace std;
@@ -17,7 +18,8 @@ int main(int argc, const char *argv[]) {
         OPT(_2_Hello_dot_),
         OPT(_3_First_Triangle),
         OPT(_4_Shader),
-        OPT(_5_Uniform_Variables)
+        OPT(_5_Uniform_Variables),
+        OPT(_6_Translation_Transformation)
     };
 #undef OPT
     cout << "==> Select an option: " << endl;

@@ -41,5 +41,8 @@
     <ClInclude Include="5_Uniform_Variables.hpp">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="6_Translation_Transformation.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
